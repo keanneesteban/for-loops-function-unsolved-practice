@@ -5,9 +5,20 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // Your code goes here...
-
+  var result = [];
+  for (var i = 0; i < arr1.length; i++) {
+    result.push(arr1[i]);
+  }
+  for (var j = 0; j < arr2.length; j++) {
+    result.push(arr2[j]);
+  }
+  return result;
 }
+
+var arr1 = ['d', 'r', 'a'];
+var arr2 = ['f', 'y'];
+
+console.log(concatArrays(arr1, arr2));
 
 
 
