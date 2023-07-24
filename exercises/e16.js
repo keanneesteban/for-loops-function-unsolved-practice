@@ -6,10 +6,21 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
+  var result = [];
 
+  for (var i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      result.push(...flatArrays(array[i]))
+    } else {
+      result.push(array[i]);
+    }
+  }
+
+  return result;
 }
+var input = [['d', 'r'], 'z', 'b', ['f', 'y']];
 
+console.log(flatArrays(input));
 
 
 // === TEST YOURSELF ===
