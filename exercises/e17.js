@@ -6,9 +6,18 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
 
+  return false;
 }
+
+console.log(doesArrayInclude((['a', 'b', 'c'], 'a')));
+console.log(doesArrayInclude((['a', 'b', 'c'], 'f')));
+
 
 
 
