@@ -6,9 +6,34 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  // Your code goes here...
+  var namesWithA = [];
+  var namesWithoutA = [];
 
+  for (var i = 0; i < array.length; i++) {
+    var name = array[i];
+    var hasLetterA = false;
+
+    for (var j = 0; j < name.length; j++) {
+      if (name[j] === 'a' || name[j] === 'A') {
+        hasLetterA = true;
+        break;
+      }
+    }
+
+    if (hasLetterA) {
+      namesWithA.push(name);
+    } else {
+      namesWithoutA.push(name);
+    }
+  }
+
+  return [namesWithA, namesWithoutA];
 }
+
+var namesArray = ['jon', 'alice', 'andrew', 'mark', 'jimmy'];
+var result = separateNamesWithAFromRest(namesArray);
+
+console.log(result);
 
 
 // === TEST YOURSELF ===
