@@ -30,10 +30,7 @@ export function separateNamesWithAFromRest(array) {
   return [namesWithA, namesWithoutA];
 }
 
-var namesArray = ['jon', 'alice', 'andrew', 'mark', 'jimmy'];
-var result = separateNamesWithAFromRest(namesArray);
 
-console.log(result);
 
 
 // === TEST YOURSELF ===

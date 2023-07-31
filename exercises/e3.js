@@ -9,15 +9,15 @@
  * */
 
 export function getAverage(array) {
-  var sum = 0;
+  let sum = 0;
+
   for (var i = 0; i < array.length; i++) {
     sum += array[i];
   }
-  var average = sum / array.length;
-  return average;
+  return sum / array.length;
 }
 
-console.log(getAverage([22, 45, 4, 65]));
+
 
 
 /** 
@@ -28,17 +28,17 @@ console.log(getAverage([22, 45, 4, 65]));
  * */ 
 
 export function getStringSum(str) {
-  var sum = 0;
-  for (var i = 0; i < str.length; i++) {
-    if (!isNaN(parseInt(str[i]))) {
-      sum += parseInt(str[i]);
+  let numTotal = 0;
+  
+  for (let elem of str ) {
+    if (parseInt(elem)) {
+      numTotal += +elem;
     }
   }
-  return sum;
+  return numTotal;
 }
 
-console.log(getStringSum("GH2U87A"));
-console.log(getStringSum("GHIUJUHSG"));
+
 
 
 // === TEST YOURSELF ===

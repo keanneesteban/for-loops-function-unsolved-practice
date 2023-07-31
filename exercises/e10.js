@@ -17,15 +17,6 @@ export function getClientsWithLetterInName(array, letter) {
   return accountHolders;
 }
 
-const bankAccounts = [
-  { id: 1, name: "Susan", balance: 100.32 },
-  { id: 2, name: "Morgan", balance: 1100.0 },
-  { id: 3, name: "Joshua", balance: 18456.57 },
-  { id: 4, name: "Candy", balance: 0.0 },
-  { id: 5, name: "Phil", balance: 18 },
-];
-
-console.log(getClientsWithLetterInName(bankAccounts, 'e'));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"

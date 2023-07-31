@@ -15,11 +15,6 @@ export function concatArrays(arr1, arr2) {
   return result;
 }
 
-var arr1 = ['d', 'r', 'a'];
-var arr2 = ['f', 'y'];
-
-console.log(concatArrays(arr1, arr2));
-
 
 
 // === TEST YOURSELF ===

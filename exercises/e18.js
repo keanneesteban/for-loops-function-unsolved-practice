@@ -5,23 +5,23 @@
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
 export function joinToString(array, separator) {
-    if (array.length === 0) {
-      return '';
-    }
-  
-    let result = array[0].toString(); 
-  
-    for (let i = 1; i < array.length; i++) {
-      result += separator + array[i].toString(); 
-    }
-  
-    return result;
+  if (array.length === 0) {
+    return '';
   }
 
-var array = ['a', 'b', 'c'];
-var separator = '-';
+  let result = '';
 
-console.log(joinToString(array, separator));
+  for (let i = 0; i < array.length; i++) {
+    if (i !== 0) {
+      result += separator;
+    }
+    result += array[i];
+  }
+
+  return result;
+}
+
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-18"

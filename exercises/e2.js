@@ -3,16 +3,13 @@
 // getNumbersWithSquareRoots(17) => [0, 1, 4, 9, 16]
 
 export function getNumbersWithSquareRoots(max) {
-  var numbers = [];
-  for (let i = 0; i <= max; i++) {
-    if (Number.isInteger(Math.sqrt(i))) {
-      numbers.push(i);
-    }
+  const numbers = [];
+  for (let i = 0; i * i <= max; i++) {
+    numbers.push(i * i);
   }
   return numbers;
 }
 
-console.log(getNumbersWithSquareRoots(17));
 
 
 // === TEST YOURSELF ===
