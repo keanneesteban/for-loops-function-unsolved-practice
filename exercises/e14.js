@@ -10,18 +10,22 @@ export function getClientsWithWrongBalance(array) {
 
   for (let i = 0; i < array.length; i++) {
     let account = array[i];
-    let sumDeposit = 0;
+    let sumDeposits = 0;
     let sumWithdrawals = 0;
 
-    for (let j = 0; j < account.deposits.length; j++) {
-      sumDeposit += account.deposits[j];
+    if (account.deposits && account.deposits.length > 0) {
+      for (let j = 0; j < account.deposits.length; j++) {
+        sumDeposits += account.deposits[j];
+      }
     }
 
-    for (let j = 0; j < account.withdrawals.length; j++) {
-      sumWithdrawals += account.withdrawals[j];
+    if (account.withdrawals && account.withdrawals.length > 0) {
+      for (let j = 0; j < account.withdrawals.length; j++) {
+        sumWithdrawals += account.withdrawals[j];
+      }
     }
 
-    let calculatedBalance = sumDeposit - sumWithdrawals;
+    let calculatedBalance = sumDeposits - sumWithdrawals;
 
     if (calculatedBalance !== account.balance) {
       wrongBalance.push(account);
@@ -30,6 +34,8 @@ export function getClientsWithWrongBalance(array) {
 
   return wrongBalance;
 }
+
+
 
 
 // === TEST YOURSELF ===
